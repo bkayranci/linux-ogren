@@ -8,7 +8,7 @@ function bkayranci {
   echo 'bitbucket.org/bkayranci'
 }
 
-OPTIONS="hangi-dizindeyim hakkimda cikis"
+OPTIONS="hangi-dizindeyim ekrani-temizle hakkimda cikis"
            select opt in $OPTIONS; do
               if [ "$opt" = "cikis" ]; then
                 clear
@@ -18,8 +18,11 @@ OPTIONS="hangi-dizindeyim hakkimda cikis"
                 clear
                 bkayranci
               elif [ "$opt" = "hangi-dizindeyim" ]; then
-                echo hangi dizinde oldugunuzu 'pwd' komutu ile ogrenebilirsiniz.
+                echo hangi dizinde oldugunuzu '-pwd-' komutu ile ogrenebilirsiniz.
                 pwd
+              elif [ "$opt" = "ekrani-temizle" ]; then
+                clear
+                echo ekrani temizlemek icin '-clear-' komutunu veya 'ctrl+l' kisayolunu kullanabilirsiniz.
               else
                 clear
                 echo hatali giris
