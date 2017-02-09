@@ -8,7 +8,7 @@ function bkayranci {
   echo 'bitbucket.org/bkayranci'
 }
 
-OPTIONS="hangi-dizindeyim ekrani-temizle dizin-degistir hakkimda cikis"
+OPTIONS="hangi-dizindeyim ekrani-temizle dizin-degistir dosya-listele hakkimda cikis"
            select opt in $OPTIONS; do
               if [ "$opt" = "cikis" ]; then
                 clear
