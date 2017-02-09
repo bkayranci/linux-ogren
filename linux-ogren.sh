@@ -8,12 +8,16 @@ function bkayranci {
   echo 'bitbucket.org/bkayranci'
 }
 
-OPTIONS="hangi-dizindeyim ekrani-temizle dizin-degistir dosya-listele hakkimda cikis"
+OPTIONS="hangi-dizindeyim ekrani-temizle dizin-degistir dosya-listele kopyala hakkimda cikis"
            select opt in $OPTIONS; do
               if [ "$opt" = "cikis" ]; then
                 clear
                 echo bkayranci: gule gule
                 exit
+              elif [ "$opt" = "kopyala" ]; then
+                echo dosya ve dizinleri kopyalamak icin '-cp-' komutunu kullanabilirsiniz. Dizinleri kopyalarken '-c' parametresini eklemeyi unutmayın.
+                echo cp kopyalayacagimdosya.txt kopyalananyer/kopyalanandosya.txt
+                echo cp -r kopyalayacagimdizin kopyalanandizin
               elif [ "$opt" = "dosya-listele" ]; then
                 echo dosya ve dizinleri listelemek icin '-ls-' komutunu kullanabilirsiniz.
                 ls
